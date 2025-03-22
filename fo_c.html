@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>独立交易员特训</title>
+    <style>
+        /* 保持核心样式 */
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+               line-height: 1.8; max-width: 1000px; margin: 2rem auto;
+               padding: 0 20px; background-color: #0a192f; color: #ccd6f6; }
+        .container { background: rgba(10, 25, 47, 0.9); padding: 2rem;
+                    border-radius: 15px; box-shadow: 0 0 30px rgba(64, 147, 255, 0.2); }
+        h1 { color: #64ffda; text-align: center; font-size: 2.5rem;
+             margin-bottom: 2rem; text-shadow: 0 0 10px rgba(100, 255, 218, 0.3); }
+        .highlight { color: #64ffda; font-weight: 600; }
+        .section { background: rgba(23, 42, 69, 0.8); padding: 1.5rem;
+                  margin: 1.5rem 0; border-radius: 8px; transition: transform 0.3s ease; }
+        .section:hover { transform: translateX(10px); }
+
+        /* 新增交易特化样式 */
+        .salary-quantum {
+            font-size: 2.2rem;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #112240 0%, #0a192f 100%);
+            border: 1px solid #233554;
+            position: relative;
+        }
+        .salary-quantum::after {
+            content: "∞";
+            position: absolute;
+            right: 30px;
+            top: -25px;
+            font-size: 4rem;
+            color: rgba(100,255,218,0.1);
+        }
+        .warning-flash {
+            border: 2px solid #ff6b6b;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            background: rgba(255,107,107,0.05);
+            position: relative;
+        }
+        .warning-flash::before {
+            content: "⚠";
+            position: absolute;
+            left: -15px;
+            top: -15px;
+            font-size: 2rem;
+            color: #ff6b6b;
+            background: #0a192f;
+            border-radius: 50%;
+            padding: 5px;
+        }
+        
+        /* 共享页尾样式 */
+        .quantum-footer {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #112240 0%, #0a192f 100%);
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .footer-glow {
+            position: absolute;
+            width: 150%;
+            height: 50px;
+            background: linear-gradient(90deg, 
+                rgba(100, 255, 218, 0) 0%, 
+                rgba(100, 255, 218, 0.3) 50%, 
+                rgba(100, 255, 218, 0) 100%);
+            animation: glow 8s infinite linear;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        @keyframes glow {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        .footer-text {
+            position: relative;
+            z-index: 1;
+            font-size: 1.8rem;
+            letter-spacing: 0.2em;
+        }
+        .footer-subtext {
+            margin-top: 1rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>独立交易员特训</h1>
+
+        <!-- 薪资模块 -->
+        <div class="salary-quantum">
+            远程独立交易员薪资范围：10k~<span class="highlight">？</span>
+        </div>
+
+        <!-- 能力要求 -->
+        <div class="section">
+            <h3>能力要求</h3>
+            <ol>
+                <li>年龄：20~30岁</li>
+                <li>无紧迫经济负担：能在培训期间维持正常的生活品质</li>
+                <li>硬件：具备远程工作条件，个人电脑</li>
+                <li>能理解、认同下面的文章：《第一面》</li>
+            </ol>
+        </div>
+
+        <!-- 自由宣言 -->
+        <div class="section">
+            <h3>你将获得</h3>
+            <ul>
+                <li>自由的工作时间</li>
+                <li>自由的工作地点</li>
+                <li>迈向财务自由</li>
+            </ul>
+        </div>
+
+        <!-- 第一面条款 -->
+        <div class="section">
+            <h3>《第一面》</h3>
+            <ol>
+                <li>行业性质与市场销售领域不同，适合性格内向、稳重、守纪律、执行力强的人员</li>
+                <li>区域性小团队/远程办公模式，通过选拔培训后自选薪酬结构</li>
+                <li>长期挑战性选拔工作（万里挑一），灵活工作机制与个性化考核体系</li>
+            </ol>
+        </div>
+
+        <!-- 禁止条款 -->
+        <div class="warning-flash">
+            <h3>严格禁止</h3>
+            <p>任何交流环节中禁止：索要资金、间接要求投资、强迫拉业务或参与融资活动</p>
+        </div>
+
+        <!-- 年龄说明 -->
+        <div class="section">
+            <h3>年龄要求说明</h3>
+            <p>传统认知误区与行业现实：多数"经验丰富"交易员实际是失败者，20-30岁年轻人更具快速学习能力和市场适应力</p>
+        </div>
+
+        <!-- 培养体系 -->
+        <div class="section">
+            <h3>培养计划</h3>
+            <ol>
+                <li>1个月内训练达到"专家"10-20年盈利水平</li>
+                <li>科学避免错误思维定式/复杂糟粕/不良习惯</li>
+                <li>5-20工作日培训后判断行业适配性</li>
+            </ol>
+        </div>
+
+        <!-- 终极说明 -->
+        <div class="section">
+            <h3>核心要义</h3>
+            <p>工作本质：<span class="highlight">"把钱推进去，之后把钱拿出来"</span></p>
+            <p>行业特性：无库存管理/无产品推广/无行政事务的极简主义</p>
+        </div>
+
+        <!-- 统一页尾 -->
+        <div class="quantum-footer">
+            <div class="footer-glow"></div>
+            <div class="footer-text">✦ 万维挑一 ✦</div>
+            <div class="footer-subtext">市场即道场<br>交易即修行</div>
+        </div>
+    </div>
+</body>
+</html>

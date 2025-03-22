@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>东方金融新秩序</title>
+    <style>
+        /* 继承基础样式 */
+        body { 
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.8;
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+            background-color: #0a192f;
+            color: #ccd6f6;
+        }
+        .container {
+            background: rgba(10, 25, 47, 0.9);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(64, 147, 255, 0.2);
+        }
+        h1 {
+            color: #64ffda;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+        }
+        
+        /* 时间轴特效 */
+        .timeline-wrapper {
+            position: relative;
+            padding: 3rem 0;
+        }
+        .timeline-bar {
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, 
+                rgba(100, 255, 218, 0) 0%, 
+                rgba(100, 255, 218, 0.3) 50%, 
+                rgba(100, 255, 218, 0) 100%);
+        }
+        .era-node {
+            width: 45%;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            background: #112240;
+            border-radius: 8px;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .era-node:hover {
+            transform: translateX(10px);
+        }
+        .era-node:nth-child(odd) {
+            margin-left: 5%;
+        }
+        .era-node:nth-child(even) {
+            margin-left: 50%;
+        }
+
+        /* 东西方对比矩阵 */
+        .matrix {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .matrix-card {
+            padding: 2rem;
+            border: 1px solid;
+            border-radius: 12px;
+        }
+        .west {
+            border-color: rgba(100, 255, 218, 0.3);
+        }
+        .east {
+            border-color: rgba(255, 107, 107, 0.3);
+        }
+
+        /* 魔界大学模块 */
+        .mj-uni {
+            padding: 2rem;
+            margin: 3rem 0;
+            background: #112240;
+            border: 2px dashed #64ffda;
+            border-radius: 15px;
+        }
+
+        /* 统一页尾 */
+        .quantum-footer {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #112240 0%, #0a192f 100%);
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .footer-glow {
+            position: absolute;
+            width: 150%;
+            height: 50px;
+            background: linear-gradient(90deg, 
+                rgba(100, 255, 218, 0) 0%, 
+                rgba(100, 255, 218, 0.3) 50%, 
+                rgba(100, 255, 218, 0) 100%);
+            animation: glow 8s infinite linear;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        @keyframes glow {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        .footer-text {
+            position: relative;
+            z-index: 1;
+            font-size: 1.8rem;
+            letter-spacing: 0.2em;
+        }
+        .highlight {
+            color: #64ffda;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .era-node {
+                width: 90%;
+                margin-left: 5% !important;
+            }
+            .matrix {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>东方金融新秩序</h1>
+
+        <!-- 核心段落 -->
+        <div class="matrix-card">
+            <p>交易行业是个古老的行业，自古便用<span class="highlight">"士农工商"</span>的"商"来代指此行业。证券化的交易市场最早追溯到1801年的伦敦证券交易所。电子化交易市场80年代才于美国兴起，上海交易所1990年才成立，距今不到40年。</p>
+        </div>
+
+        <!-- 时间轴 -->
+        <div class="timeline-wrapper">
+            <div class="timeline-bar"></div>
+            <div class="era-node">
+                <p><span class="highlight">行业本质</span><br>核心从未变化（低买高卖）<br>但形式已发生质变</p>
+            </div>
+            <div class="era-node">
+                <p><span class="highlight">二级市场</span><br>年轻行业（不到40岁）<br>职业认可度待提升</p>
+            </div>
+        </div>
+
+        <!-- 东西方对比 -->
+        <div class="matrix">
+            <div class="matrix-card west">
+                <h3>西方体系</h3>
+                <p>培养路径：<br>
+                <span class="highlight">顶尖理工科 → 专家系统</span><br>
+                特点：培养周期长、准入门槛高</p>
+            </div>
+            <div class="matrix-card east">
+                <h3>东方现状</h3>
+                <p>行业乱象：<br>
+                <span class="highlight">鱼龙混杂的培训机构</span><br>
+                天才交易员<span class="highlight">孤军奋战</span></p>
+            </div>
+        </div>
+
+        <!-- 魔界大学 -->
+        <div class="mj-uni">
+            <h2><span class="highlight">魔界大学</span> 创立宣言</h2>
+            <p>核心理念：<br>
+            <span class="highlight">"先赚钱，再学习；边赚钱，边学习"</span><br>
+            培养目标：<br>
+            ✓ 二级市场交易大师（<span class="highlight">稳定暴利复利奇迹</span>）<br>
+            ✓ 跨国私募基金团队长</p>
+            <p>筛选机制：<br>
+            <span class="highlight">5-20个工作日</span>极速考核<br>
+            结果：<span class="highlight">"留下极少数，劝返大多数"</span></p>
+        </div>
+
+        <!-- 统一页尾 -->
+        <div class="quantum-footer">
+            <div class="footer-glow"></div>
+            <div class="footer-text">✦ 万维挑一 ✦</div>
+            <p>市场生存是第一课，交易才是终极修行</p>
+        </div>
+    </div>
+</body>
+</html>
